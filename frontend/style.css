@@ -1,3 +1,22 @@
+:root {
+    --brown: #555759;
+    --light-gray: #f6f6f6;
+    --green: #91f1ba;
+    --turquoise: #6fdaf3;
+    --pink: #c85e7a;
+}
+
 body {
-    background-color: rgb(85, 162, 230);
+    margin: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+main {
+    display: inline-block;
+    background-color: var(--brown);
+    color: var(--light-gray);
+    font-size: 1.2rem;
+    padding: 2rem;
+    border-radius: .5rem;
 }

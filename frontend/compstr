@@ -1,1 +1,0 @@
-nim js -d:release -o:script.js src/main.nim
