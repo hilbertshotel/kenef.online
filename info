@@ -3,3 +3,7 @@ service dir:
 
 symlink:
 ln -s /etc/nginx/sites-available/kenef.nginx /etc/nginx/sites-enabled/kenef.nginx
+
+certbot:
+sudo snap install --classic certbot
+sudo certbot --nginx
