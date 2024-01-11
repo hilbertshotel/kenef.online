@@ -1,0 +1,22 @@
+## SYSTEMD SERVICE DIRS
+/lib/systemd/system or /etc/systemd/system
+
+## NGINX SYMLINK
+ln -s /etc/nginx/sites-available/kenef.nginx /etc/nginx/sites-enabled/kenef.nginx
+
+## CERTBOT ALABALA
+sudo snap install --classic certbot
+sudo certbot --nginx
+
+## NIM TO JS COMPILE STRING
+nim js -d:release -o:script.js src/main.nim
+
+## CHMOD SSH FOLDER
+chmod 600 folder
+sudo chown root:root folder
+
+## REMOTE CONNECT
+sudo ssh ubuntu@3.78.46.30 -i ~/.ssh/aws.pem
+
+## TRANSFER MP3 SSH
+scp -i ~/.ssh/aws.pem FILENAME ubuntu@3.78.46.30:/home/ubuntu/music/
