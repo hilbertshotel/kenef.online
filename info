@@ -1,0 +1,5 @@
+service dir:
+/lib/systemd/system
+
+symlink:
+ln -s /etc/nginx/sites-available/kenef.nginx /etc/nginx/sites-enabled/kenef.nginx

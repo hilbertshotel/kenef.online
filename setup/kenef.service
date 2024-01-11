@@ -1,0 +1,13 @@
+[Unit]
+Description=kenef
+
+[Service]
+Restart=always
+RestartSec=30s
+WorkingDirectory=/home/ubuntu/kenef.online
+ExecStart=/home/ubuntu/kenef.online/kenef.online
+StandardOutput=append:/home/ubuntu/kenef.online/logs/kenef.log
+StandardError=append:/home/ubuntu/kenef.online/logs/kenef.log
+
+[Install]
+WantedBy=multi-user.target
