@@ -1,0 +1,8 @@
+- download button
+- solo button (pass whole slice inside the range structure of the template)
+- if muted not played in the player
+- up/down arrows in the list or drag and drop functionality
+- tooltips
+
+load mp3 only by request with little loading part
+SHA256 for downloading mp3 files

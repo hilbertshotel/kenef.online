@@ -19,4 +19,4 @@ sudo chown root:root folder
 sudo ssh ubuntu@3.78.46.30 -i ~/.ssh/aws.pem
 
 ## TRANSFER MP3 SSH
-scp -i ~/.ssh/aws.pem FILENAME ubuntu@3.78.46.30:/home/ubuntu/music/
+scp -i ~/.ssh/aws.pem filename.mp3 ubuntu@3.78.46.30:/home/ubuntu/music/
