@@ -1,4 +1,5 @@
 {
-    "hostAddr": "127.0.0.1:8888",
-    "tmpDir": "./templates/*"
+    "host_addr": "127.0.0.1:8888",
+    "file_server": "/home/kolu/test/",
+    "tmp_dir": "./templates/*"
 }

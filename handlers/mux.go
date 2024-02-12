@@ -10,17 +10,17 @@ func Mux(d *dep.Dependencies, wg sync.WaitGroup) *http.ServeMux {
 	mux := http.NewServeMux()
 
 	// static files
-	frontend := http.StripPrefix("/frontend/", http.FileServer(http.Dir("./frontend/")))
-	mux.Handle("/frontend/", frontend)
+	// frontend := http.StripPrefix("/frontend/", http.FileServer(http.Dir("./frontend/")))
+	// mux.Handle("/frontend/", frontend)
 
-	music := http.StripPrefix("/music/", http.FileServer(http.Dir("./music/")))
-	mux.Handle("/music/", music)
+	file_server := http.FileServer(http.Dir(d.Cfg.FileServer))
+	mux.Handle("/", file_server)
 
-	// index
-	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		wg.Add(1)
-		index(w, r, d, &wg)
-	})
+	// // index
+	// mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	// 	wg.Add(1)
+	// 	index(w, r, d, &wg)
+	// })
 
 	return mux
 }

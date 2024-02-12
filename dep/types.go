@@ -10,8 +10,9 @@ type Logger struct {
 }
 
 type Config struct {
-	HostAddr string `json:"hostAddr"`
-	TmpDir string	`json:"tmpDir"`
+	HostAddr string `json:"host_addr"`
+	FileServer string `json:"file_server"`
+	TmpDir string	`json:"tmp_dir"`
 }
 
 type Dependencies struct {
