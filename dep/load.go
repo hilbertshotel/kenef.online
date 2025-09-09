@@ -1,13 +1,13 @@
 package dep
 
 import (
-	"log"
-	"runtime"
-	"path/filepath"
-	"os"
 	"encoding/json"
 	"fmt"
 	"html/template"
+	"log"
+	"os"
+	"path/filepath"
+	"runtime"
 )
 
 func Load() (*Dependencies, error) {
@@ -30,6 +30,7 @@ func Load() (*Dependencies, error) {
 	}, nil
 }
 
+// Logger
 func initLogger() *Logger {
 	okLog := log.New(os.Stdout, "ok ", log.Ldate|log.Ltime)
 	errLog := log.New(os.Stderr, "error ", log.Ldate|log.Ltime)
@@ -47,6 +48,7 @@ func initLogger() *Logger {
 	}
 }
 
+// Config
 func loadConfig(path string) (*Config, error) {
 	file, err := os.Open(path)
 	if err != nil {
@@ -63,6 +65,7 @@ func loadConfig(path string) (*Config, error) {
 	return &cfg, nil
 }
 
+// Templates
 func initTemplates(cfg *Config) (*template.Template, error) {
 	tmp, err := template.ParseGlob(cfg.TmpDir)
 	if err != nil {

@@ -1,28 +1,14 @@
 {{ template "header.html" }}
 
     <main>
-        <h1>kolu.be</h1>
 
-        <div id="track_list">
-            {{ range . }}
+        <h1>kenef.online</h1>
 
-            <button onclick="muteButton(this, '{{.}}')" class="track_button">M</button>
-            <button onclick="soloButton()" class="track_button">S</button>
-            <h6 class="track_name">{{ . }}</h6>
-            <button id="download_button">download</button>
+          {{range .}}
+            <a href="/{{.}}">{{.}}</a> <br>
+          {{end}}
 
-            <audio id="{{ . }}" src="music/{{ . }}" type="audio/mpeg">{{ . }}</audio>
-            <br>
-
-            {{ end }}
-        </div>
-
-        <div id="media_controls">
-            <button onclick="playButton()" class="media_button">PLAY</button>
-            <button id="pauseButton" onclick="pauseButton()" class="media_button">PAUSE</button>
-            <button onclick="stopButton()" class="media_button">STOP</button>
-            <button class="media_button">RANDOM</button>
-            <button class="media_button">LOOP</button>
-        </div>
+    </main>
 
 {{ template "footer.html" }}
+

@@ -6,13 +6,13 @@ import (
 
 type Logger struct {
 	Error func(error)
-	Ok func(string)
+	Ok    func(string)
 }
 
 type Config struct {
 	HostAddr string `json:"host_addr"`
-	FileServer string `json:"file_server"`
-	TmpDir string	`json:"tmp_dir"`
+	FileDir  string `json:"file_dir"`
+	TmpDir   string `json:"tmp_dir"`
 }
 
 type Dependencies struct {

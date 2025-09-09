@@ -1,8 +1,30 @@
-- download button
-- solo button (pass whole slice inside the range structure of the template)
-- if muted not played in the player
-- up/down arrows in the list or drag and drop functionality
-- tooltips
+install nim
+add https
+add some simple css
 
-load mp3 only by request with little loading part
-SHA256 for downloading mp3 files
+
+
+
+CSS CODE FOR DIFFERENT SCREEN SIZES
+
+/* Small screens (max 600px wide) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    background-color: lightgray;
+  }
+}
+
+/* Medium screens (601px–1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+/* Large screens (1025px and up) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 18px;
+  }
+}

@@ -1,4 +1,4 @@
 import jsconsole
 import dom
 
-console.log("nim")
+console.log("nim is active")

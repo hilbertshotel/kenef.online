@@ -1,13 +1,14 @@
 package main
 
 import (
-	"net/http"
-	"time"
 	"fmt"
+	"net/http"
 	"os"
-	"sync"
 	"os/signal"
+	"sync"
 	"syscall"
+	"time"
+
 	"kenef.online/dep"
 	"kenef.online/handlers"
 )
@@ -28,9 +29,9 @@ func main() {
 
 	// Create Server
 	server := http.Server{
-		Addr: d.Cfg.HostAddr,
-		Handler: handlers.Mux(d, wg),
-		ReadTimeout: 10 * time.Second,
+		Addr:         d.Cfg.HostAddr,
+		Handler:      handlers.Mux(d, &wg),
+		ReadTimeout:  10 * time.Second,
 		WriteTimeout: 10 * time.Second,
 	}
 
@@ -47,14 +48,14 @@ func main() {
 
 	// Shutdown
 	select {
-		case err := <-ech:
-			d.Log.Error(err)
-			os.Exit(1)
-		
-		case <-shutdown:
-			d.Log.Ok("waiting for handlers to finish")
-			wg.Wait()
-			d.Log.Ok("SERVICE STOP")
-			os.Exit(0)
+	case err := <-ech:
+		d.Log.Error(err)
+		os.Exit(1)
+
+	case <-shutdown:
+		d.Log.Ok("waiting for handlers to finish")
+		wg.Wait()
+		d.Log.Ok("SERVICE STOP")
+		os.Exit(0)
 	}
 }

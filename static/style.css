@@ -1,0 +1,35 @@
+:root {
+    --darkest: rgb(63, 63, 63);
+    --dark: #586e70;
+    --light: #839496;
+    --lightest: #9fb5b0;
+    --color: #4d8d02;
+}
+
+@font-face {
+  font-family: "DejaVu Sans Mono";
+  src: url("/static/fonts/DejaVuSansMono.woff2") format("woff2"),
+       url("/static/fonts/DejaVuSansMono.woff") format("woff");
+  font-display: swap;
+}
+
+body {
+  font-family: "DejaVu Sans Mono", monospace;
+  background-color: var(--darkest);
+}
+
+main {
+  text-align: center;
+}
+
+h1 {
+  color: var(--color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--lightest);
+}
+a:hover {
+  color: var(--light);
+}
