@@ -1,9 +1,17 @@
+/* COLORS
+
+#48739d blue
+#6f5e45 brown
+#4d8d02 green
+
+*/
+
 :root {
     --darkest: rgb(63, 63, 63);
     --dark: #586e70;
     --light: #839496;
     --lightest: #9fb5b0;
-    --color: #4d8d02;
+    --color: #796343;
 }
 
 @font-face {
@@ -16,6 +24,8 @@
 body {
   font-family: "DejaVu Sans Mono", monospace;
   background-color: var(--darkest);
+  font-size: 1.2rem;
+  color: var(--lightest)
 }
 
 main {
@@ -32,4 +42,28 @@ a {
 }
 a:hover {
   color: var(--light);
+}
+
+/* STORY */
+
+#story_title {
+  text-align: center;
+}
+
+.story {
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: justify;
+  hyphens: auto;
+  background-color: rgb(60, 60, 60);
+}
+
+@media (max-width: 800px) {
+  .story {
+    max-width: 100%;
+    padding: 0.5rem;
+    text-align: left;
+    hyphens: none;
+  }
 }

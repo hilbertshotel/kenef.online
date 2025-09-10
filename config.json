@@ -1,5 +1,5 @@
 {
     "host_addr": "127.0.0.1:8888",
-    "file_dir": "/home/kolu/test/",
+    "file_dir": "./stories",
     "tmp_dir": "./templates/*"
 }

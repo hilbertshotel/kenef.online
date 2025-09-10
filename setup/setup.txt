@@ -1,0 +1,5 @@
+git pull
+
+go build
+
+sudo systemctl restart kenef.online
