@@ -1,4 +1,4 @@
-/* COLORS
+/* MORE COLORS
 
 #48739d blue
 #6f5e45 brown
@@ -28,7 +28,7 @@ body {
   color: var(--lightest)
 }
 
-main {
+.landing {
   text-align: center;
 }
 
@@ -54,8 +54,8 @@ a:hover {
   max-width: 60ch;
   margin: 0 auto;
   padding: 1rem;
-  text-align: justify;
-  hyphens: auto;
+  /* text-align: justify; */
+  /* hyphens: auto; */
   background-color: rgb(60, 60, 60);
 }
 
@@ -64,6 +64,6 @@ a:hover {
     max-width: 100%;
     padding: 0.5rem;
     text-align: left;
-    hyphens: none;
+    /* hyphens: none; */
   }
 }
